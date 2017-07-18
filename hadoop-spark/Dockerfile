@@ -38,10 +38,11 @@ RUN \
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Download Hadoop package
-ADD http://apache.mirrors.tds.net/hadoop/common/hadoop-2.6.1/hadoop-2.6.1.tar.gz /tmp/
+#ADD http://apache.mirrors.tds.net/hadoop/common/hadoop-2.6.1/hadoop-2.6.1.tar.gz /tmp/
 
+copy hadoop-2.6.1.tar.gz /tmp/
 # Download Spark package
-ADD http://d3kbcqa49mib13.cloudfront.net/spark-1.4.0-bin-hadoop2.6.tgz /tmp/
+copy spark-1.4.0-bin-hadoop2.6.tgz /tmp/
 
 # Create /opt directory
 RUN mkdir -p /opt/
